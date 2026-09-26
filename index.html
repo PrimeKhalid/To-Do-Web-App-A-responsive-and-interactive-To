@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My To-Do App</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main Container -->
+    <main class="app-container">
+
+        <!-- Header -->
+        <header class="app-header">
+
+            <div>
+                <p class="subtitle">Stay Organized</p>
+
+                <h1>My To-Do List</h1>
+
+                <p class="header-text">
+                    Manage your daily tasks easily and stay productive.
+                </p>
+            </div>
+
+        </header>
+
+
+        <!-- Add Task Section -->
+        <section class="add-task-section">
+
+            <form id="taskForm">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter a new task..."
+                    autocomplete="off"
+                >
+
+                <button type="submit" id="addTaskBtn">
+                    Add Task
+                </button>
+
+            </form>
+
+            <p id="errorMessage" class="error-message"></p>
+
+        </section>
+
+
+        <!-- Task Lists -->
+        <section class="task-section">
+
+            <!-- Pending Tasks -->
+            <div class="task-column">
+
+                <div class="column-header">
+
+                    <div>
+                        <h2>Pending Tasks</h2>
+
+                        <p>
+                            <span id="pendingCount">0</span> pending
+                        </p>
+                    </div>
+
+                    <span class="status-icon pending-icon">
+                        !
+                    </span>
+
+                </div>
+
+                <div id="pendingTasks" class="task-list">
+
+                    <div class="empty-state" id="pendingEmpty">
+                        <div class="empty-icon">✓</div>
+
+                        <h3>No pending tasks</h3>
+
+                        <p>
+                            Add a task to get started.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Completed Tasks -->
+            <div class="task-column completed-column">
+
+                <div class="column-header">
+
+                    <div>
+                        <h2>Completed Tasks</h2>
+
+                        <p>
+                            <span id="completedCount">0</span> completed
+                        </p>
+                    </div>
+
+                    <span class="status-icon completed-icon">
+                        ✓
+                    </span>
+
+                </div>
+
+                <div id="completedTasks" class="task-list">
+
+                    <div class="empty-state" id="completedEmpty">
+                        <div class="empty-icon">✓</div>
+
+                        <h3>No completed tasks</h3>
+
+                        <p>
+                            Completed tasks will appear here.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+
+            <p>
+                To-Do Web App | Built with HTML, CSS & JavaScript
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+
